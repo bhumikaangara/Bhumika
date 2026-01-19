@@ -1,0 +1,34 @@
+# Grade Calculator Program
+
+# Taking input from user
+marks = float(input("Enter your marks (0 - 100): "))
+
+# Validating marks
+if marks < 0 or marks > 100:
+    print("❌ Invalid marks! Please enter marks between 0 and 100.")
+
+else:
+    # Determining grade using conditions
+    if marks >= 90:
+        grade = "A+"
+        message = "Excellent Performance!"
+        
+    elif marks >= 75 and marks < 90:
+        grade = "A"
+        message = "Very Good Job!"
+
+    elif marks >= 60 and marks < 75:
+        grade = "B"
+        message = "Good Performance"
+
+    elif marks >= 40 and marks < 60:
+        grade = "C"
+        message = "Needs Improvement"
+
+    else:
+        grade = "F"
+        message = "Failed. Better luck next time!"
+
+    # Displaying result
+    print("✅ Grade:", grade)
+    print("📢 Message:", message)
