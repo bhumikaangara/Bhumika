@@ -1,0 +1,50 @@
+# collections_demo.py
+
+print("=== COLLECTIONS DEMO ===\n")
+
+# 1. Store student names in a list
+students = ["Anil", "Bhavya", "Charan", "Anil", "Divya"]
+print("Original Student List:", students)
+
+# 2. Add an element
+students.append("Eshwar")
+print("After Adding a Student:", students)
+
+# 3. Remove an element
+students.remove("Charan")
+print("After Removing a Student:", students)
+
+# 4. Sort elements
+students.sort()
+print("After Sorting:", students)
+
+# 5. Use tuple for fixed data
+course_info = ("Python Developer Internship", "3 Months", 2026)
+print("\nCourse Info (Tuple):", course_info)
+
+# 6. Convert list to set to remove duplicates
+student_set = set(students)
+print("\nSet (Duplicates Removed):", student_set)
+
+# 7. Perform set operations
+new_students = {"Farah", "Divya", "Ganesh"}
+
+print("\nNew Students Set:", new_students)
+print("Union:", student_set.union(new_students))
+print("Intersection:", student_set.intersection(new_students))
+print("Difference:", student_set.difference(new_students))
+
+# 8. Iterate over collections
+print("\nIterating over Student List:")
+for s in students:
+    print("-", s)
+
+# 9. Compare mutable vs immutable
+print("\nMutable vs Immutable:")
+print("List is Mutable → We can change it")
+print("Tuple is Immutable → We cannot change it")
+
+# 10. Formatted output
+print("\n=== FORMATTED OUTPUT ===")
+print(f"Total Students (List): {len(students)}")
+print(f"Total Unique Students (Set): {len(student_set)}")
