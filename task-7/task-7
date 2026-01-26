@@ -1,0 +1,42 @@
+import json
+
+# Student records (Institution based)
+students = {
+    "101": {
+        "name": "Ravi",
+        "age": 20,
+        "course": "Python",
+        "institution": "ABC Engineering College",
+        "marks": 88
+    },
+    "102": {
+        "name": "Sita",
+        "age": 21,
+        "course": "Data Science",
+        "institution": "ABC Engineering College",
+        "marks": 90
+    }
+}
+
+print("---- Student Records ----")
+for roll, details in students.items():
+    print(f"Roll No: {roll}, Name: {details['name']}")
+
+# Update
+students["101"]["marks"] = 92
+
+# Delete
+del students["102"]
+
+# Convert to JSON (no file)
+json_data = json.dumps(students, indent=4)
+print("\nJSON Format Data:\n", json_data)
+
+# Convert JSON back to dictionary
+loaded_data = json.loads(json_data)
+
+print("\n---- Clean Output After JSON Read ----")
+for roll, details in loaded_data.items():
+    print(f"Roll No: {roll}")
+    for key, value in details.items():
+        print(f"  {key}: {value}")
