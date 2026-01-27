@@ -1,0 +1,21 @@
+# CSV File Handling
+import csv
+
+try:
+    # Write data to CSV
+    with open("students.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(["ID", "Name", "Course"])
+        writer.writerow([1, "Bhumika", "Python"])
+        writer.writerow([2, "Anu", "Data Science"])
+        writer.writerow([3, "Ravi", "AI"])
+
+    # Read CSV data
+    with open("students.csv", "r") as file:
+        reader = csv.reader(file)
+        print("\nCSV File Content:\n")
+        for row in reader:
+            print(row)
+
+except Exception as e:
+    print("Error occurred:", e)
